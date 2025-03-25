@@ -259,6 +259,11 @@ img {
   background-color: #B80000;
 }
 
+.small-navbar {
+  padding: 0 !important;
+  transition: all 0.5s;
+}
+
 header .navbar {
   padding: 10px;
   border-bottom: 1px solid #B1AEAE;

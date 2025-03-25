@@ -1,42 +1,25 @@
-// تحديد Media Query
-const mediaQuery = window.matchMedia("(max-width: 992px)");
 
-// الدالة التي تريد تشغيلها
-function handleScreenChange(e) {
-  if (e.matches) {
-    var swiper = new Swiper(".swiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      autoplay:true,
-      loop:true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  
-  } else {
-    var swiper = new Swiper(".swiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      autoplay:true,
-      loop:true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  
-  }
+var scrollpos = window.scrollY;
+var navbar = document.getElementById("navbar");
+
+function add_class_on_scroll() {
+    navbar.classList.add("small-navbar");
 }
 
-// الاستماع لتغيرات الشاشة
-mediaQuery.addEventListener("change", handleScreenChange);
+function remove_class_on_scroll() {
+    navbar.classList.remove("small-navbar");
+}
 
-// استدعاء الدالة لأول مرة عند تحميل الصفحة
-handleScreenChange(mediaQuery);
+window.addEventListener("scroll", function () {
+    // تحديث قيمة scrollpos عند التمرير
+    scrollpos = window.scrollY;
 
-
+    if (scrollpos > 10) {
+        add_class_on_scroll();
+    } else {
+        remove_class_on_scroll();
+    }
+});
 
 
 

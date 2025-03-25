@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&display=swap');
 @import './variablrs';
 @import'./mixins';
-@import './article.scss';
+
 
 * {
     padding: 0;
@@ -45,6 +45,11 @@ img {
 
 .section-title {
     @include section-title($black-color, $main-color)
+}
+.small-navbar{
+    padding: 0 !important;
+    transition: all 0.5s;
+
 }
 
 header {
