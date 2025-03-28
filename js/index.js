@@ -1,4 +1,3 @@
-
 var scrollpos = window.scrollY;
 var navbar = document.getElementById("navbar");
 
